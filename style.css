@@ -10,6 +10,7 @@
     background-color: #fafafa;
   }
   
+  
   .logo {
     margin-bottom: 20px;
   }
@@ -19,6 +20,7 @@
     display: flex;
     justify-content: center;
   }
+  
   
   .image-card {
     width: 300px;
