@@ -3,7 +3,6 @@
         {
             "name": "United States",
             "medal count": 1
-
         },
         {
             "name": "China",
@@ -12,22 +11,18 @@
         {
             "name": "Russia",
             "medal count": 1
-        }
-
-    ],
-
-    "sports": [
+        },
         {
-            "title": "Gymnastics",
-            "final schedule": "August 7, 2021" 
+            "title": "Track and Field",
+            "final schedule": "August 8, 2021"
         },
         {
             "title": "Swimming",
             "final schedule": "August 1, 2021"
         },
         {
-            "title": "Track and Field",
-            "final schedule": "August 8, 2021"
+            "title": "Gymnastics",
+            "final schedule": "August 7, 2021" 
         }
 
     ]
