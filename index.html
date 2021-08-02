@@ -1,41 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      h1 {text-align: center;}
-      p {text-align: center;}
-      div {text-align: center;}
-      img{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    </style>
+    <script defer type="text/javascript" src="src/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <meta charset="utf-8" />
     <title>Olympic Sports</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script defer type="text/javascript" src="src/index.js"></script>
-    <img src=https://cdn.mos.cms.futurecdn.net/6JunFB4xWYSmGsbdWLikZX-1200-80.jpg height ="200" class="center">
+    <img src=https://cdn.mos.cms.futurecdn.net/pHmN9jdCG5e3JbMT4nKpP6-1200-80.jpg height ="200" class="center">
     <h1>Sports at the 2020 Olympic Games</h1>
   </head>
   <body>
-    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Athletics_pictogram.svg/1200px-Athletics_pictogram.svg.png" />
     <div class="image-container">
       <div class="image-card">
-        <h2 id="fg-title" class="title">Track and Field</h2>
-        <img id="fg-image" src="./assets/image-placeholder.jpg" class="image" />
-        <div class="likes-section">
+        <h2 id="sport-title" class="title">Test</h2>
+        <img id="sport-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Athletics_pictogram.svg/1200px-Athletics_pictogram.svg.png" height ="170"/>
+        <div class="schedule-section">
         <h3 id="schedule-title" class="title">Schedule</h3>
-
-          <span id="fg-likes" class="likes">0 likes</span>
-          <button id="fg-like-button" class="like-button">♥</button>
+          <span id="final-schedule" class="schedule"></span>
+          <button id="schedule-button" class="schedule-button">🥇</button>
         </div>
-        <ul id="fg-comments" class="comments">
+        <ul id="comments" class="comments">
           <li></li>
           <li></li>
           <li></li>
         </ul>
-        <form id="fg-comment-form" class="comment-form">
+        <form id="comment-form" class="comment-form">
           <input
             class="comment-input"
             type="text"
@@ -43,7 +31,7 @@
             placeholder="Add a comment..."
           />
           <button class="comment-button" type="submit">Post</button>
-
+  
 
 
 
@@ -58,8 +46,9 @@
               <h2 id="fg-title" class="title">Swimming</h2>
               <img id="fg-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Swimming_pictogram.svg/300px-Swimming_pictogram.svg.png" class="image" />
               <div class="likes-section">
+              <h3 id="schedule-title" class="title">Schedule</h3>
                 <span id="fg-likes" class="likes">0 likes</span>
-                <button id="fg-like-button" class="like-button">♥</button>
+                <button id="fg-like-button" class="like-button">🥇</button>
               </div>
               <ul id="fg-comments" class="comments">
                 <li></li>
@@ -82,8 +71,9 @@
         <h2 id="fg-title" class="title">Gymnastics</h2>
         <img id="fg-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Gymnastics_%28artistic%29_pictogram.svg/1024px-Gymnastics_%28artistic%29_pictogram.svg.png" class="image" />
         <div class="likes-section">
+          <h3 id="schedule-title" class="title">Schedule</h3>
           <span id="fg-likes" class="likes">0 likes</span>
-          <button id="fg-like-button" class="like-button">♥</button>
+          <button id="fg-like-button" class="like-button">🥇</button>
         </div>
         <ul id="fg-comments" class="comments">
           <li></li>

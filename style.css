@@ -1,14 +1,15 @@
 * {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica;
     box-sizing: border-box;
   }
   
   body {
     padding: 20px;
     text-align: center;
-    background-color: #fafafa;
+    background-color: #4390e9;
   }
+  
   
   .logo {
     margin-bottom: 20px;
@@ -20,6 +21,7 @@
     justify-content: center;
   }
   
+  
   .image-card {
     width: 300px;
     border: 1px solid #00000020;
@@ -30,7 +32,7 @@
   
   .image {
     width: 300px;
-    /* border: 1px solid black; */
+    /* border: 5px solid black; */
   }
   
   .title {
@@ -125,6 +127,22 @@
   }
   
   .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1{
+    text-align: center;}
+
+  p{
+    text-align: center;}
+
+  div{
+    text-align: center;
+  }
+
+  img{
     display: block;
     margin-left: auto;
     margin-right: auto;
