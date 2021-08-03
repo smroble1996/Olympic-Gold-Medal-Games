@@ -1,8 +1,12 @@
 const scheduleTitle = document.getElementById('schedule-title')
 const scheduleButton = document.getElementById('schedule-button')
 const finalSchedule = document.getElementById('final-schedule')
-const sportTitle = document.getElementById('sport-title')
-const sportImage = document.getElementById('sport-image')
+const trackTitle = document.getElementById('track-title')
+const swimTitle = document.getElementById('swim-title')
+const gymTitle = document.getElementById('gym-title')
+const trackImage = document.getElementById('track-image')
+const swimImage = document.getElementById('swim-image')
+const gymImage = document.getElementById('gym-image')
 const commentForm = document.getElementById('commentForm')
 const commentButton = document.getElementById('commentButton')
 
@@ -23,9 +27,12 @@ scheduleButton.addEventListener('click', () => {
 
 function renderData(data){
 
-    sportTitle.innerText = data[3].title
+    trackTitle.innerText = data[3].title
+    swimTitle.innerText = data[4].title
+    // gymTitle.innerText = data[5].title
 
 
+console.log(data)
 }
 
 function renderSchedule(day){
