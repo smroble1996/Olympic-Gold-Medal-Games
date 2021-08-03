@@ -79,6 +79,8 @@
     margin-left: 0;
     padding-left: 10px;
     font-size: 0.85rem;
+
+    /* Create space for the comments  */
   }
   
   .comments li {
