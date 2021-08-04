@@ -65,7 +65,10 @@ function renderData(data){
     trackCommentButton.addEventListener('submit', (e) =>{
         e.preventDefault();
     })
+
+    //hoverover images to display medal count
     
-
-
-    //json the image files if possible 
+    trackImage.addEventListener('click', () => {
+        trackSchedule.innerText = data[3].medalcount
+    }) 
+}
