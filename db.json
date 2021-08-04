@@ -1,32 +1,35 @@
 {
-    "teams": [
-        {
-            "name": "United States",
-            "medalcount": 1
-        },
-        {
-            "name": "China",
-            "medalcount": 1
-        },
-        {
-            "name": "Russia",
-            "medalcount": 1
-        },
-        {
-            "title": "Track and Field",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Athletics_pictogram.svg/1200px-Athletics_pictogram.svg.png",
-            "final": "August 8, 2021"
-        },
-        {
-            "title": "Swimming",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Swimming_pictogram.svg/300px-Swimming_pictogram.svg.png",
-            "final": "August 1, 2021"
-        },
-        {
-            "title": "Gymnastics",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Gymnastics_%28artistic%29_pictogram.svg/1024px-Gymnastics_%28artistic%29_pictogram.svg.png",
-            "final": "August 7, 2021" 
-        }
-
-    ]
+    "info": {
+        "track_medals": [
+            {"name": "United States: 10 medals"},
+            {"name": "China: 9 medals"},
+            {"name": "Russia: 8 medals"}
+        ],
+        "swim_medals": [
+            {"name": "United States: 11 medals"},
+            {"name": "China: 10 medals"},
+            {"name": "Russia: 9 medals"}
+        ],
+        "gym_medals": [
+            {"name": "United States: 12 medals"},
+            {"name": "China: 11 medals"},
+            {"name": "Russia: 10 medals"}
+        ],
+        "events": [
+            {"title": "Track and Field"},
+            {"title": "Swimming"},
+            {"title": "Gymnastics"}
+        ],
+        "event_images": [
+            {"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Athletics_pictogram.svg/1200px-Athletics_pictogram.svg.png"},
+            {"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Swimming_pictogram.svg/300px-Swimming_pictogram.svg.png"},
+            {"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Gymnastics_%28artistic%29_pictogram.svg/1024px-Gymnastics_%28artistic%29_pictogram.svg.png"}
+        ],
+        "final_date": [
+            {"final": "August 8, 2021"},
+            {"final":"August 1, 2021"},
+            {"final":"August 7, 2021"}
+        ]
+    
+    }
 }

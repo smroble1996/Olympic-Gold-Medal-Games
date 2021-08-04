@@ -1,4 +1,3 @@
-const scheduleTitle = document.getElementById('schedule-title')
 
 const trackImage = document.getElementById('track-image')
 const trackTitle = document.getElementById('track-title')
@@ -25,110 +24,113 @@ const gymCommentForm = document.getElementById('gym-comment-form')
 const gymCommentButton = document.getElementById('gym-comment-button')
 
 
-fetch ("http://localhost:3000/teams")
+fetch ("http://localhost:3000/info")
 .then(res => res.json())
 .then(renderData)
 
 
-
 function renderData(data){
 
-    console.log(data)
+console.log(data)
 
+trackTitle.innerText = data.events[0].title
+swimTitle.innerText = data.events[1].title
+gymTitle.innerText = data.events[2].title
 
-    trackTitle.innerText = data[3].title
-    swimTitle.innerText = data[4].title
-    gymTitle.innerText = data[5].title
-
-    trackImage.src = data[3].image
-    swimImage.src = data[4].image
-    gymImage.src = data[5].image
+trackImage.src = data.event_images[0].image
+swimImage.src = data.event_images[1].image
+gymImage.src = data.event_images[2].image
 
    
    
-    let trackButtonClicked = false
+let trackButtonClicked = false
  
-    trackButton.addEventListener('click', () => {
-        trackButtonClicked = !trackButtonClicked
-        if (trackButtonClicked) {
-            trackSchedule.innerText = data[3].final
-        }
-        else {
-            trackSchedule.innerText = "Gold Medal Game"
-
-        }
-    })
-
-
-    let swimButtonClicked = false
- 
-    swimButton.addEventListener('click', () => {
-        swimButtonClicked = !swimButtonClicked
-        if (swimButtonClicked) {
-            swimSchedule.innerText = data[4].final
-        }
-        else {
-            swimSchedule.innerText = "Gold Medal Game"
-
-        }
-    })
-
-    let gymButtonClicked = false
- 
-    gymButton.addEventListener('click', () => {
-        gymButtonClicked = !gymButtonClicked
-        if (gymButtonClicked) {
-            gymSchedule.innerText = data[5].final
-        }
-        else {
-            gymSchedule.innerText = "Gold Medal Game"
-
-        }
-    })
-
-    trackCommentForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        setComment(e.target.comment.value);
-    
-    });
-
-    function setComment(comment){
-        const li = document.createElement('li');
-        li.innerText = comment;
-        trackComments.append(li);
+trackButton.addEventListener('click', () => {
+    trackButtonClicked = !trackButtonClicked
+    if (trackButtonClicked) {
+        trackSchedule.innerText = data.final_date[0].final
     }
+    else {
+        trackSchedule.innerText = "Gold Medal Game"
+    }
+})
 
+let swimButtonClicked = false
+ 
+swimButton.addEventListener('click', () => {
+    swimButtonClicked = !swimButtonClicked
+    if (swimButtonClicked) {
+        swimSchedule.innerText = data.final_date[1].final
+    }
+    else {
+        swimSchedule.innerText = "Gold Medal Game"
+    }
+})
 
+let gymButtonClicked = false
+ 
+gymButton.addEventListener('click', () => {
+    gymButtonClicked = !gymButtonClicked
+    if (gymButtonClicked) {
+        gymSchedule.innerText = data.final_date[2].final
+    }
+    else {
+        gymSchedule.innerText = "Gold Medal Game"
+    }
+})
 
-
-
-
-
-    
-
-    //make an event listener that selects one of the countries,
-    // and shows their medal count
-    
-//  setTrackComments(data.comments)
+ setTrackComments(data.track_medals)
+ setSwimComments(data.swim_medals)
+ setGymComments(data.gym_medals)
 
 // }
 
-// function setTrackComments(comments){
-//     trackComments.innerHTML = ' '
-//     // comments.forEach(comment => addTrackComments(comment.name))
-// }
+function setTrackComments(comments){
+    comments.forEach(comment => addTrackComments(comment.name))
+}
 
+function addTrackComments (comment){
+    const trackLi = document.createElement('li')
+    trackLi.innerText = comment
+    trackComments.append(trackLi)
+}
 
-// function addTrackComments (comment){
-//     const trackLi = document.createElement('li')
-//     trackLi.innerText = comment
-//     trackComments.append(trackLi)
-
-// }
-
-    // trackCommentButton.addEventListener('submit', (e) =>{
-    //     e.preventDefault();
-    //     console.log(e.target[0].value)
-    // })
+trackCommentForm.addEventListener('submit', (e) =>{
+     e.preventDefault();
+    addTrackComments(e.target.comment.value)
+    e.target.comment.value = ' '
     
+})
+
+function setSwimComments(comments){
+    comments.forEach(comment => addSwimComments(comment.name))
+}
+    
+function addSwimComments (comment){
+    const swimLi = document.createElement('li')
+    swimLi.innerText = comment
+    swimComments.append(swimLi)
+}
+    
+swimCommentForm.addEventListener('submit', (e) =>{
+      e.preventDefault();
+      addSwimComments(e.target.comment.value)
+      e.target.comment.value = ' '
+})
+
+function setGymComments(comments){
+    comments.forEach(comment => addGymComments(comment.name))
+}
+
+function addGymComments (comment){
+    const gymLi = document.createElement('li')
+    gymLi.innerText = comment
+    gymComments.append(gymLi)
+}
+
+gymCommentForm.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    addGymComments(e.target.comment.value)
+    e.target.comment.value = ' '
+    })
 }
