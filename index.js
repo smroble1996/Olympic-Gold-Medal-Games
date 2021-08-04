@@ -40,32 +40,78 @@ function renderData(data){
     swimTitle.innerText = data[4].title
     gymTitle.innerText = data[5].title
 
-  
+    trackImage.src = data[3].image
+    swimImage.src = data[4].image
+    gymImage.src = data[5].image
 
-
-    //make schedule toggle between date and "gold medal game"
    
+   
+    let trackButtonClicked = false
+ 
     trackButton.addEventListener('click', () => {
-        trackSchedule.innerText = data[3].final
+        trackButtonClicked = !trackButtonClicked
+        if (trackButtonClicked) {
+            trackSchedule.innerText = data[3].final
+        }
+        else {
+            trackSchedule.innerText = "Gold Medal Game"
+
+        }
     })
 
+
+    let swimButtonClicked = false
+ 
     swimButton.addEventListener('click', () => {
-        swimSchedule.innerText = data[4].final
+        swimButtonClicked = !swimButtonClicked
+        if (swimButtonClicked) {
+            swimSchedule.innerText = data[4].final
+        }
+        else {
+            swimSchedule.innerText = "Gold Medal Game"
+
+        }
     })
 
+    let gymButtonClicked = false
+ 
     gymButton.addEventListener('click', () => {
-        gymSchedule.innerText = data[5].final
+        gymButtonClicked = !gymButtonClicked
+        if (gymButtonClicked) {
+            gymSchedule.innerText = data[5].final
+        }
+        else {
+            gymSchedule.innerText = "Gold Medal Game"
+
+        }
     })
 
 
+
+    
 
     //make an event listener that selects one of the countries,
     // and shows their medal count
     
-    trackCommentButton.addEventListener('submit', (e) =>{
-        e.preventDefault();
-    })
+ setTrackComments(data.comments)
+
+}
+
+function setTrackComments(comments){
+    trackComments.innerHTML = ' '
+    // comments.forEach(comment => addTrackComments(comment.name))
+}
+
+
+function addTrackComments (comment){
+    const trackLi = document.createElement('li')
+    trackLi.innerText = comment
+    trackComments.append(trackLi)
+
+}
+
+    // trackCommentButton.addEventListener('submit', (e) =>{
+    //     e.preventDefault();
+    //     console.log(e.target[0].value)
+    // })
     
-
-
-    //json the image files if possible 
