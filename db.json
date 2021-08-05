@@ -1,19 +1,19 @@
 {
     "info": {
         "track_medals": [
-            {"name": "United States: 10 medals"},
-            {"name": "China: 9 medals"},
-            {"name": "Russia: 8 medals"}
+            {"name": "United States all the way, baby!"},
+            {"name": "Jamaica, of course"},
+            {"name": "Italy #darkhorse #sleeperpick #ciao"}
         ],
         "swim_medals": [
-            {"name": "United States: 11 medals"},
-            {"name": "China: 10 medals"},
-            {"name": "Russia: 9 medals"}
+            {"name": "Oh Canada"},
+            {"name": "United States breeds swimmers"},
+            {"name": "Australia, mate"}
         ],
         "gym_medals": [
-            {"name": "United States: 12 medals"},
-            {"name": "China: 11 medals"},
-            {"name": "Russia: 10 medals"}
+            {"name": "United States, #supportSimone"},
+            {"name": "Japan #homefieldadvantage"},
+            {"name": "Russia, not Russia #ROC"}
         ],
         "events": [
             {"title": "Track and Field"},

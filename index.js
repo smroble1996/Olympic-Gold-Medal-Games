@@ -1,48 +1,42 @@
 
-const trackImage = document.getElementById('track-image')
-const trackTitle = document.getElementById('track-title')
-const trackSchedule = document.getElementById('track-schedule')
-const trackButton = document.getElementById('track-button')
 const trackComments= document.getElementById('track-comments')
 const trackCommentForm = document.getElementById('track-comment-form')
 const trackCommentButton = document.getElementById('track-comment-button')
 
-const swimImage = document.getElementById('swim-image')
-const swimTitle = document.getElementById('swim-title')
-const swimSchedule = document.getElementById('swim-schedule')
-const swimButton = document.getElementById('swim-button')
 const swimComments= document.getElementById('swim-comments')
 const swimCommentForm = document.getElementById('swim-comment-form')
 const swimCommentButton = document.getElementById('swim-comment-button')
 
-const gymImage = document.getElementById('gym-image')
-const gymTitle = document.getElementById('gym-title')
-const gymSchedule = document.getElementById('gym-schedule')
-const gymButton = document.getElementById('gym-button')
 const gymComments= document.getElementById('gym-comments')
 const gymCommentForm = document.getElementById('gym-comment-form')
 const gymCommentButton = document.getElementById('gym-comment-button')
+
+
 
 
 fetch ("http://localhost:3000/info")
 .then(res => res.json())
 .then(renderData)
 
-
 function renderData(data){
 
-console.log(data)
+const trackImage = document.getElementById('track-image')
+const trackTitle = document.getElementById('track-title')
+const swimImage = document.getElementById('swim-image')
+const swimTitle = document.getElementById('swim-title')
+const gymImage = document.getElementById('gym-image')
+const gymTitle = document.getElementById('gym-title')
+
 
 trackTitle.innerText = data.events[0].title
 swimTitle.innerText = data.events[1].title
 gymTitle.innerText = data.events[2].title
-
 trackImage.src = data.event_images[0].image
 swimImage.src = data.event_images[1].image
 gymImage.src = data.event_images[2].image
 
-   
-   
+const trackSchedule = document.getElementById('track-schedule')
+const trackButton = document.getElementById('track-button')
 let trackButtonClicked = false
  
 trackButton.addEventListener('click', () => {
@@ -55,6 +49,8 @@ trackButton.addEventListener('click', () => {
     }
 })
 
+const swimSchedule = document.getElementById('swim-schedule')
+const swimButton = document.getElementById('swim-button')
 let swimButtonClicked = false
  
 swimButton.addEventListener('click', () => {
@@ -67,6 +63,8 @@ swimButton.addEventListener('click', () => {
     }
 })
 
+const gymSchedule = document.getElementById('gym-schedule')
+const gymButton = document.getElementById('gym-button')
 let gymButtonClicked = false
  
 gymButton.addEventListener('click', () => {
@@ -86,7 +84,8 @@ gymButton.addEventListener('click', () => {
 // }
 
 function setTrackComments(comments){
-    comments.forEach(comment => addTrackComments(comment.name))
+    comments.map(e => e.name).forEach(addTrackComments)
+    // comments.forEach(comment => addTrackComments(comment.name))
 }
 
 function addTrackComments (comment){
@@ -98,12 +97,13 @@ function addTrackComments (comment){
 trackCommentForm.addEventListener('submit', (e) =>{
      e.preventDefault();
     addTrackComments(e.target.comment.value)
-    e.target.comment.value = ' '
+    e.target.comment.value =' '
     
 })
 
 function setSwimComments(comments){
-    comments.forEach(comment => addSwimComments(comment.name))
+    // comments.forEach(comment => addSwimComments(comment.name))
+    comments.map(e => e.name).forEach(addSwimComments)
 }
     
 function addSwimComments (comment){
@@ -119,7 +119,9 @@ swimCommentForm.addEventListener('submit', (e) =>{
 })
 
 function setGymComments(comments){
-    comments.forEach(comment => addGymComments(comment.name))
+    // comments.forEach(comment => addGymComments(comment.name))
+    comments.map(e => e.name).forEach(addGymComments)
+
 }
 
 function addGymComments (comment){
@@ -133,4 +135,10 @@ gymCommentForm.addEventListener('submit', (e) =>{
     addGymComments(e.target.comment.value)
     e.target.comment.value = ' '
     })
+
+
+
+
+//combine event listeners/functions to consolidate
+//add another method? 
 }
