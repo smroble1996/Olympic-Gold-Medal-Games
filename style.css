@@ -3,7 +3,6 @@
     font-family: Helvetica;
     box-sizing: border-box;
     text-align: center;
-
   }
   
   body {
@@ -25,9 +24,8 @@
     text-align: center;
     background-color: white;
     margin: 0 auto 30px;
-  
-    
   }
+
   .image {
     width: 300px;
     display: block;
@@ -54,10 +52,8 @@
     font-weight: 600;
     padding-left: 30px;
     padding-right: 30px;
-    
   }
 
-  
   .schedule-button {
     color: rgb(255, 127, 80);
     font-size: 1.5rem;
@@ -67,19 +63,6 @@
     cursor: pointer;
   }
   
-  .schedule-button:hover {
-    color: rgb(241, 71, 19);
-  }
-  
-  .schedule-button:active {
-    color: rgb(253, 159, 124);
-  }
-  
-  .schedule-button:focus {
-    outline: none;
-  }
-  
-
   .comments-title {
     font-size: .9rem;
     font-weight: 600;
@@ -95,29 +78,24 @@
     padding-right: 10px;
     font-size: 0.85rem;
   }
-  
-  .comments li {
-    margin: 0px 0;
-    letter-spacing: 0.2px;
-  }
-  
+
   .comment-form {
     width: 100%;
     border-top: 1px solid #00000020;
     padding: 10px;
     margin-top: 10px;
     text-align: center;
+  }
+  
 
+  .comment-input:focus {
+    outline: none;
   }
   
   .comment-input {
     width: 83%;
     border: none;
     font-size: 0.8rem;
-  }
-  
-  .comment-input:focus {
-    outline: none;
   }
   
   .comment-button {
@@ -128,7 +106,7 @@
     cursor: pointer;
     transition: color 300ms;
   }
-  
+
   .comment-button:hover {
     color: rgb(37, 68, 245);
   }
@@ -140,9 +118,4 @@
   .comment-button:focus {
     outline: none;
   }
-  
-  .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+ 

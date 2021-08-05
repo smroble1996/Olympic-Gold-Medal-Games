@@ -81,8 +81,6 @@ gymButton.addEventListener('click', () => {
  setSwimComments(data.swim_medals)
  setGymComments(data.gym_medals)
 
-// }
-
 function setTrackComments(comments){
     comments.map(e => e.name).forEach(addTrackComments)
     // comments.forEach(comment => addTrackComments(comment.name))
@@ -135,10 +133,4 @@ gymCommentForm.addEventListener('submit', (e) =>{
     addGymComments(e.target.comment.value)
     e.target.comment.value = ' '
     })
-
-
-
-
-//combine event listeners/functions to consolidate
-//add another method? 
 }
